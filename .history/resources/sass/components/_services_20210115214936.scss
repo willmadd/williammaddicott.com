@@ -1,0 +1,49 @@
+.site-wrapper.services__lead {
+    background-color: $servicesBackground;
+    transition: 2s;
+    transition-timing-function: cubic-bezier(0.83, 0, 0.17, 1);
+    h1, h3, a.active{
+        transition: 2s;
+        color: $servicesText;
+    }
+    // a.active{
+    //     color: $servicesGreen;
+    // }
+    a{
+        transition: 2s;
+        // color:$white;
+        color: $servicesNonActive;
+    }
+    h4{
+        color: $white;
+    }
+  }
+
+  .services{
+      &__wrapper{
+          
+      }
+      &__card{
+          width:100%;
+          padding:24px;
+          box-sizing: border-box;
+        }
+        &__dev{
+          background-color: $cardYellow;
+          color: $servicesBackground;
+
+      }
+      &__design{
+          color: $white;
+          background-color: $cardRed;
+      }
+      &__seo{
+        color: $servicesBackground;
+        background-color: $cardBlue;
+    }
+    &__hosting{
+        color: $servicesBackground;
+        background-color: $cardGreen;
+        // background-color:red;
+    }
+  }

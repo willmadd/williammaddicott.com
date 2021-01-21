@@ -1,0 +1,22 @@
+section.home{
+    background-color: $workGreyLight;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:100%;
+    margin-top:43px;
+    h1{
+        font-size: 36px;
+        @include breakpoint($mobLarge){
+            font-size: 48px;
+        }
+        @include breakpoint($tablet){
+            grid-template-columns: repeat(4, 1fr);
+        }
+        @include breakpoint($desktop){
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+    font-size: 144px;
+}

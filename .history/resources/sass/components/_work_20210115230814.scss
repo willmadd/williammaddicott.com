@@ -1,0 +1,13 @@
+.work{
+    h3{
+        margin-top:88px;
+    }
+    p{
+        margin-bottom36px 0;
+    }
+    &__container{
+        display:grid;
+        grid-template-columns: repeat(3, auto);
+        grid-gap: 12px;
+    }
+}

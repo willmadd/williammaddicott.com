@@ -1,0 +1,16 @@
+nav{
+    ul{
+        display: flex;
+        justify-content: space-around;
+        margin:0;
+        padding:0;
+
+        li{
+            list-style:none;
+            color: $workGreyMid;
+            &.active{
+                color:
+            }
+        }
+    }
+}

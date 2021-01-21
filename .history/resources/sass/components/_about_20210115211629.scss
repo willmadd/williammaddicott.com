@@ -1,0 +1,8 @@
+.about{
+    &__content{
+        width:100%;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-gap:24px;
+    }
+}

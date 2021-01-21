@@ -1,0 +1,10 @@
+.work{
+    h3{
+        margin-top:48px;
+    }
+    &__container{
+        display:grid;
+        grid-template-columns: repeat(3, auto);
+        grid-gap: 12px;
+    }
+}

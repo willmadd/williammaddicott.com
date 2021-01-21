@@ -1,0 +1,22 @@
+nav {
+    ul {
+        display: flex;
+        justify-content: space-around;
+        margin: 0;
+        padding: 0;
+        padding: 12px 0;
+        background-color: $workGreyDark;
+        position: fixed;
+        width: 100%;
+        top
+        li {
+            list-style: none;
+            a {
+                color: $white;
+                &.active {
+                    color: $workGreyDark;
+                }
+            }
+        }
+    }
+}

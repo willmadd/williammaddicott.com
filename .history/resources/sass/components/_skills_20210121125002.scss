@@ -1,0 +1,14 @@
+.skills{
+    margin-top:88px;
+    &__wrapper{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap:16px;
+        @include breakpoint($tablet){
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include breakpoint($tablet){
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}

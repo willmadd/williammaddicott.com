@@ -1,0 +1,68 @@
+.site-wrapper.services__lead {
+    background-color: $servicesBackground;
+    transition: 2s;
+    transition-timing-function: cubic-bezier(0.83, 0, 0.17, 1);
+    h1, h3, a.active{
+        transition: 2s;
+        color: $servicesText;
+    }
+    // a.active{
+    //     color: $servicesGreen;
+    // }
+    a{
+        transition: 2s;
+        // color:$white;
+        color: $servicesNonActive;
+    }
+    h4{
+        color: $white;
+    }
+  }
+
+  .services{
+      &__wrapper{
+          display: grid;
+          grid-template-columns: repeat(2, auto);
+          grid-gap: 12px;
+          margin-left: 12px;
+          margin-right: 12px;
+      }
+      &__title{
+        display: flex;
+    justify-content: center;
+    align-items: center;
+      }
+      &__card{
+          width:100%;
+          // padding:24px;
+          box-sizing: border-box;
+          text-align: center;
+          box-shadow: 0px 0px 5px $workGreyMid;
+          display: flex;
+          img{
+            margin: 24px 0;
+            max-width: 96px;
+          }
+        }
+        &__dev{
+          background-color: $cardYellow;
+          color: $servicesBackground;
+
+      }
+      &__design{
+          color: $white;
+          h4{
+            color: $white; 
+          }
+          background-color: $cardRed;
+      }
+      &__seo{
+        color: $servicesBackground;
+        background-color: $cardBlue;
+    }
+    &__hosting{
+        color: $servicesBackground;
+        background-color: $cardGreen;
+        // background-color:red;
+    }
+  }

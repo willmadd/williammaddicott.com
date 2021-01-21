@@ -1,0 +1,25 @@
+section.home{
+    background-color: $workGreyLight;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:100%;
+    margin-top:43px;
+    h1{
+        font-size: 36px;
+        @include breakpoint($mobMed){
+            font-size: 48px;
+        }
+        @include breakpoint($mobLarge){
+            font-size: 60px;
+        }
+        @include breakpoint($tablet){
+            font-size: 96px;
+        }
+        @include breakpoint($desktop){
+            font-size: 96px;
+        }
+    }
+    font-size: 144px;
+}

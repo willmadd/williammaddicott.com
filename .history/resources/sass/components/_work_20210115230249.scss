@@ -1,0 +1,6 @@
+.work{
+    &__container{
+        grid-template-columns: repeat(3, auto);
+        grid-gap: 12px;
+    }
+}

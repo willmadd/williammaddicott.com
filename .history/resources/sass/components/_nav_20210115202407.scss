@@ -1,0 +1,20 @@
+nav{
+    ul{
+        display: flex;
+        justify-content: space-around;
+        margin:0;
+        padding:0;
+padding: 12px 0;
+background-color: $g;
+        li{
+
+            list-style:none;
+            a{
+                color: $workGreyMid;
+                &.active{
+                    color:$workGreyDark;
+                }
+            }
+        } 
+    }
+}
