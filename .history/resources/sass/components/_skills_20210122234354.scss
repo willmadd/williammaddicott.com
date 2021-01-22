@@ -1,0 +1,22 @@
+.skills{
+    margin-top:88px;
+    &__wrapper{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap:16px;
+        margin-top:48px;
+        @include breakpoint($mobVLarge){
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @include breakpoint($tablet){
+            grid-template-columns: repeat(4, 1fr);
+        }
+        @include breakpoint($desktop){
+            grid-template-columns: repeat(6, 1fr);
+        }
+        p{
+            margin-top: 12px;
+            text-align: center;
+        }
+    }
+}
