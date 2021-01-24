@@ -4,7 +4,7 @@ function onSubmit(token) {
 
 function submitForm(token){
   $('#contact__form').hide();
-  $('#loader').show();
+  $('#loader').css('display', 'flex');
   axios({
     method: 'post',
     url: '/api/form',
@@ -22,6 +22,10 @@ function submitForm(token){
     $('#status__message').show();
   }, (error) => {
     console.log(error);
+    $('#loader').hide();
+    $('#contact__form').show();
+    $('#form__error').show();
+    
   });
 }
 

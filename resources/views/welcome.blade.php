@@ -508,6 +508,7 @@
                 </div>
                 <form id="contact__form">
                     <div class="wrapper">
+                    <p id="form__error" class="warning contact__form__error">An error occured at our end and your message could not be sent, Please try again!</p>
                         <fieldset class="formRow">
                             <div class="formRow--item">
                                 <label for="firstname" class="formRow--input-wrapper js-inputWrapper">

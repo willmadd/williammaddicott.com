@@ -1,13 +1,12 @@
 
 .container {
     display: flex;
-    // align-items: center;
+    align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: calc(100vh - 184px);
     flex-direction: row;
     flex-wrap: wrap;
   }
-  
   svg {
     display: none;
   }

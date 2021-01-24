@@ -1,38 +1,46 @@
 .contact {
-    margin-top:88px;
-    &__text{
+    margin-top: 88px;
+    min-height: calc(100vh - 184px);
+    &__text {
         display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 24px;
-    img{
-        margin-top:48px;
-        width:56px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 24px;
+        img {
+            margin-top: 48px;
+            width: 56px;
+        }
     }
+    &__form{
+        &__error{
+            display:none;
+            margin-bottom: 24px;
+            text-align: center;
+        }
     }
-    &__wrapper{
-        display:grid;
+    &__wrapper {
+        display: grid;
         grid-template-columns: 1fr;
-        grid-gap:24px;
+        grid-gap: 24px;
         width: calc(100% - 48px);
         margin-left: 24px;
         margin-right: 24px;
         box-sizing: border-box;
-        margin-top:48px;
-        @include breakpoint($desktop){
+        margin-top: 48px;
+        @include breakpoint($desktop) {
             grid-template-columns: 1fr 1fr;
         }
     }
-    textarea{
-        height:300px;
-        vertical-align:text-top;
+    textarea {
+        height: 300px;
+        vertical-align: text-top;
         // line-height:30px;
-        &::-webkit-input-placeholder{
+        &::-webkit-input-placeholder {
             // vertical-align:text-top;
             // margin-top:120px;
-            line-height:300px;
+            line-height: 300px;
         }
     }
     .input__wrapper {
@@ -49,7 +57,7 @@
     .formRow {
         position: relative;
         width: 100%;
-        border:0;
+        border: 0;
         padding: 8px 0;
         margin: 0;
         &--item {
@@ -65,11 +73,11 @@
             border: solid 1px rgb(149, 152, 154);
             border-radius: 4px;
             color: rgb(44, 50, 53);
-            letter-spacing: .2px;
+            letter-spacing: 0.2px;
             font-weight: 400;
             font-size: 16px;
             resize: none;
-            transition: all .2s ease;
+            transition: all 0.2s ease;
             font-family: $headingFont;
             &-wrapper {
                 position: relative;
@@ -81,7 +89,7 @@
                         background-color: #ffffff;
                         color: $cardBlue;
                         text-transform: uppercase;
-                        letter-spacing: .8px;
+                        letter-spacing: 0.8px;
                         font-size: 11px;
                         line-height: 14px;
                         transform: translateY(0);
@@ -96,16 +104,15 @@
                 .formRow--input {
                     &:focus,
                     &:hover {
-                        border-color: $cardBlue
+                        border-color: $cardBlue;
                     }
                 }
             }
         }
-        textarea + .placeholder{
-            top:30px;
-                // padding-bottom: 270px;
-                // background-color: transparent;
-            
+        textarea + .placeholder {
+            top: 30px;
+            // padding-bottom: 270px;
+            // background-color: transparent;
         }
         .placeholder {
             position: absolute;
@@ -115,10 +122,10 @@
             padding: 0 10px;
             color: #707070;
             white-space: nowrap;
-            letter-spacing: .2px;
+            letter-spacing: 0.2px;
             font-weight: normal;
             font-size: 16px;
-            transition: all, .2s;
+            transition: all, 0.2s;
             transform: translateY(-50%);
             pointer-events: none;
             user-select: none;
@@ -127,26 +134,26 @@
     }
 }
 
-.status__message{
-    height:479px;
+.status__message {
+    height: 479px;
     display: flex;
     justify-content: center;
     align-items: center;
-    display:none;
+    display: none;
 }
 
-.send__button{
-    padding:12px;
+.send__button {
+    padding: 12px;
     background-color: $cardYellow;
-    margin-bottom:32px;
+    margin-bottom: 32px;
     border-radius: 4px;
-    outline:none;
-    border:0;
+    outline: none;
+    border: 0;
     text-transform: uppercase;
-    margin-top:8px;
+    margin-top: 8px;
     cursor: pointer;
     transition: 0.2s;
-    &:hover{
+    &:hover {
         color: $white;
         background-color: $purple;
         transition: 0.2s;
