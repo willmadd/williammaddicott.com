@@ -19,3 +19,5 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::post('form', 'App\Http\Controllers\ContactController@receiveMessage');
+
+Route::get('phone', 'App\Http\Controllers\ContactController@getPhone');

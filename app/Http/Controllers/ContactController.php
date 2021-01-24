@@ -24,8 +24,6 @@ class ContactController extends Controller
         
         $recaptcha = $this->reCaptcha($token);
 
-// return $recaptcha['success'];
-
         if (!$recaptcha['success']){
             return response()->json([
                 'message'=>'recaptcha failed'
@@ -36,7 +34,7 @@ class ContactController extends Controller
             'name' =>$name,
             // 'email' =>$email,
             'email'=>'willmaddicott@gmail.com',
-            'message'=>$message
+            'message_content'=>$message
         ];
 
         $result = $this->sendEmail($message);
@@ -87,21 +85,14 @@ class ContactController extends Controller
     }
     private function sendEmail($data) 
     {
-        
-        // $mail = Mail::to($to_email)->send(new SendMessage)->with('data', $data);
-        
-        // viewData['data'] = $data;
-        
-        // $mail = (new SendMessage)->to($to_email)->subject('test message')->send();
         try{
-            $data = array('name'=>"Virat Gandhi");
                 Mail::send('email-template', $data, function($message) {
                     $message->to('willmaddicott@gmail.com', 'Williammaddicott.com')->subject
                         ('New Message from Website');
                     $message->from('noreply@williammaddicott.com','Website');
                 });
                 return [
-                    'message' => "Your Message has been sent! I,ll be in touch soon!", 
+                    'message' => "Your Message has been sent! I'll be in touch soon!", 
                     'success' => true
                 ];
             }
@@ -111,5 +102,9 @@ class ContactController extends Controller
                     'success' => false
                 ];
             }
+        }
+
+        public function getPhone () {
+            return "07849 989858";
         }
 };

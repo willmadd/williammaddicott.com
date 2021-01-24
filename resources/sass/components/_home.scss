@@ -12,7 +12,7 @@ section.home{
             font-size: 48px;
         }
         @include breakpoint($mobLarge){
-            font-size: 60px;
+            font-size: 52px;
         }
         @include breakpoint($tablet){
             font-size: 96px;

@@ -12,7 +12,9 @@
         <div class="row">
             <div class="col-xl-6 col-lg-6 col-sm-12 m-auto">
                 <h3> Request from website </h3>
-                <p>{{ $name }}</p> has name a request form the williammaddicott.com
+                <p>{{ $name }} has sent request from williammaddicott.com</p>
+                <p>{{ $email }}</p>
+                <p>{{ $message_content }}</p>
             </div>
         </div>
     </div>

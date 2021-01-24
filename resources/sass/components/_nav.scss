@@ -1,23 +1,148 @@
-nav {
-    ul {
-        z-index:9;
-        display: flex;
-        justify-content: space-around;
-        margin: 0;
-        padding: 12px 0;
-        background-color: $workGreyDark;
-        position: fixed;
-        width: 100%;
-        top:0;
-        li {
-            list-style: none;
-            a {
-                color: $white;
+$menuBreakpoint: $tablet;
 
-            }
+nav {
+    background-color: $workGreyDark;
+    height: 43px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 555;
+    .active {
+    border-bottom: 3px solid $cardYellow;
+}
+    #menuToggle {
+        padding: 12px 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        left: 12px;
+        @include breakpoint($menuBreakpoint){
+            padding:0;
         }
     }
-    .active{
-        border-bottom: 3px solid $cardYellow;
+}
+
+#menuToggle {
+    display: block;
+    position: relative;
+    top: 50px;
+    left: 50px;
+
+    z-index: 1;
+
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#menuToggle a {
+    text-decoration: none;
+    color: $white;
+
+    transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+    border-bottom: 3px solid $cardYellow;
+}
+
+#menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+
+    cursor: pointer;
+
+    z-index: 2;
+    opacity: 0;
+    -webkit-touch-callout: none;
+}
+#menuToggle .burger__span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: $white;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+        @include breakpoint($menuBreakpoint){
+            display:none;
+        }
+}
+
+#menuToggle .burger__span:first-child {
+    transform-origin: 0% 0%;
+}
+
+#menuToggle .burger__span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ .burger__span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: $white;
+}
+
+#menuToggle input:checked ~ .burger__span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ .burger__span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
+#menu {
+    position: absolute;
+    width: 100vw;
+    margin: -100px 0 0 -24px;
+    padding: 24px;
+    padding-top: 100px;
+    padding-bottom: 24px;
+    background-color: $workGreyDark;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    @include breakpoint($menuBreakpoint){
+        display:flex;
+        padding:0;
+        margin:0;
+        transform: translate(0, 0);
+        justify-content: space-evenly;
+
+    }
+}
+
+#menu li {
+    padding: 10px 0;
+    font-size: 22px;
+    text-align: center;
+    padding-right: 24px;
+    @include breakpoint($menuBreakpoint){
+        padding: 8px 0;
+    }
+}
+
+#menuToggle input:checked ~ ul {
+    transform: none;
+}
+
+
+
+.menu__title {
+    height: 43px;
+    color: $white;
+    text-align: center;
+    line-height: 43px;
+    @include breakpoint($menuBreakpoint){
+        display:none;
     }
 }

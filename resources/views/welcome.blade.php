@@ -26,6 +26,7 @@
     <title>William Maddicott | Web Design & Development</title>
 
     <!-- Fonts -->
+    <script defer src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <script src="https://www.google.com/recaptcha/api.js"></script>
@@ -37,20 +38,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Maven+Pro&display=swap"
         rel="stylesheet">
     <link href="./css/app.min.css" rel="stylesheet">
+    
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1WZK7KTYNQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1WZK7KTYNQ"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-1WZK7KTYNQ');
-</script>
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-1WZK7KTYNQ');
+    </script>
 </head>
 
 <body>
-    <nav class="nav">
+    <!-- <nav class="nav">
         <ul>
             <li>
                 <a href="#home" class="active"><span class="nav__letter">W</span>M</a>
@@ -71,7 +76,39 @@
                 <a href="#contact"><span class="nav__letter">C</span>ontact</a>
             </li>
         </ul>
+    </nav> -->
+
+    <nav role="navigation">
+        <h2 id="menu__title" class="menu__title"><span>WM</span></h2>
+        <div id="menuToggle">
+            <input type="checkbox" />
+            <span class="burger__span"></span>
+            <span class="burger__span"></span>
+            <span class="burger__span"></span>
+            <ul id="menu">
+                <li>
+                    <a href="#home" class="active"><span class="nav__letter">W</span>M</a>
+                </li>
+                <li>
+                    <a href="#about"><span class="nav__letter">A</span>bout</a>
+                </li>
+                <li>
+                    <a href="#services"><span class="nav__letter">S</span>ervices I Offer</a>
+                </li>
+                <li>
+                    <a href="#work"><span class="nav__letter">M</span>y Work</a>
+                </li>
+                <li>
+                    <a href="#skills"><span class="nav__letter">T</span>ech</a>
+                </li>
+                <li>
+                    <a href="#contact"><span class="nav__letter">C</span>ontact</a>
+                </li>
+            </ul>
+        </div>
     </nav>
+
+    <!-- // -->
     <main class="main">
         <section class="home" id="home">
             <h1>william maddicott.</h1>
@@ -447,7 +484,7 @@
 
                 <div id="html" class="skills__card">
                     <img src="./images/html.svg" loading="lazy" width="157" height="157" alt="html logo" />
-                <p class="green">HTML5</p>
+                    <p class="green">HTML5</p>
                 </div>
                 <div id="css" class="skills__card">
                     <img src="./images/css3.svg" loading="lazy" width="157" height="157" alt="css logo" />
@@ -482,10 +519,10 @@
                     <p class="purple">GraphQL</p>
                 </div>
                 <div id="js" class="skills__card">
-                    
-                <img src="./images/javascript.svg" loading="lazy" width="157" height="157" alt="javascript logo" />
-                <p class="green">JS</p>    
-            </div>
+
+                    <img src="./images/javascript.svg" loading="lazy" width="157" height="157" alt="javascript logo" />
+                    <p class="green">JS</p>
+                </div>
                 <div id="node" class="skills__card">
                     <img src="./images/node.svg" loading="lazy" width="157" height="157" alt="node logo" />
                     <p class="yellow">Node</p>
@@ -501,18 +538,30 @@
             </h2>
             <div class="contact__wrapper">
                 <div class="contact__text">
-                    <p>Got a query or a project you want to discuss? Please send me a message and I'll get right back to you!</p>
-                    <a herf="https://www.linkedin.com/in/william-maddicott/" aria-label="link to linked in profile">
-                        <img src="./images/linkedin.svg" width="48" height="48" alt="linked in logo"/>
+                    <p>Got a query or a project you want to discuss? Please send me a message and I'll get right back to
+                        you!</p>
+                    <a href="https://www.linkedin.com/in/william-maddicott/" aria-label="link to linked in profile" target="blank">
+                        <img src="./images/linkedin.svg" width="48" height="48" alt="linked in logo" />
                     </a>
+                    <div class="phone__section">
+                        <p>Phone</p>
+                            <form id="phone__form" class="phone__form">
+                                <div id="phone__container" class="phone__container"><p>0784X XXXXXX</p></div>
+                                <button id="phone__submit" class="phone__submit" type="submit">Reveal</button>
+                            </form>
+                        <p class="subheading">Hidden by default to protect me from Spam</p>
+                    </div>
+                    <h4>Or Send me a message:</h4>
                 </div>
                 <form id="contact__form">
+                <input type="hidden" id="recaptcha__input" name="recaptcha__input" value="">
                     <div class="wrapper">
-                    <p id="form__error" class="warning contact__form__error">An error occured at our end and your message could not be sent, Please try again!</p>
+                        <p id="form__error" class="warning contact__form__error">An error occured at our end and your
+                            message could not be sent, Please try again!</p>
                         <fieldset class="formRow">
                             <div class="formRow--item">
                                 <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
-                                    <input type="text" class="formRow--input js-input" id="name" placeholder="Name">
+                                    <input type="text" class="formRow--input js-input" name="name" id="name" placeholder="Name" minlength="2" required>
                                 </label>
                             </div>
                         </fieldset>
@@ -521,7 +570,7 @@
                         <fieldset class="formRow">
                             <div class="formRow--item">
                                 <label for="email" class="formRow--input-wrapper js-inputWrapper">
-                                    <input type="text" class="formRow--input js-input" id="email" placeholder="Email">
+                                    <input type="text" class="formRow--input js-input" name="email" id="email" placeholder="Email">
                                 </label>
                             </div>
                         </fieldset>
@@ -530,11 +579,12 @@
                         <fieldset class="formRow">
                             <div class="formRow--item">
                                 <label for="message" class="formRow--input-wrapper js-inputWrapper">
-                                    <textarea class="formRow--input js-input" id="message"
+                                    <textarea class="formRow--input js-input" name="message" id="message"
                                         placeholder="Message"></textarea>
                                 </label>
                             </div>
                         </fieldset>
+                        <div class="error__text"></div>
                     </div>
                     <button class="g-recaptcha send__button" data-sitekey="6LfKrjMaAAAAANq9l407LqejJcG6GscjLZEuC8Tr"
                         data-callback='onSubmit' data-action='submit'>Submit</button>

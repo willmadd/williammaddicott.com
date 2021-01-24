@@ -87,7 +87,7 @@
                     .placeholder {
                         top: -5px;
                         background-color: #ffffff;
-                        color: $cardBlue;
+                        color: $cardRed;
                         text-transform: uppercase;
                         letter-spacing: 0.8px;
                         font-size: 11px;
@@ -96,7 +96,7 @@
                     }
                     .formRow--input:not(:focus):not(:hover) {
                         & ~ .placeholder {
-                            color: $cardBlue;
+                            color: $cardRed;
                             font-family: $headingFont;
                         }
                     }
@@ -104,7 +104,7 @@
                 .formRow--input {
                     &:focus,
                     &:hover {
-                        border-color: $cardBlue;
+                        border-color: $cardRed;
                     }
                 }
             }
@@ -135,11 +135,16 @@
 }
 
 .status__message {
-    height: 479px;
     display: flex;
     justify-content: center;
     align-items: center;
     display: none;
+    div.success{
+        width: 100%;
+        text-align: center;
+        padding: 24px 0;
+        color: $green;
+    }
 }
 
 .send__button {
@@ -158,4 +163,52 @@
         background-color: $purple;
         transition: 0.2s;
     }
+}
+
+
+.phone{
+    &__section{
+        margin: 24px 0;
+    }
+    &__form{
+        display: flex;
+        border: 1px solid rgb(149, 152, 154);
+        background-color: white;
+        border-radius:3px;
+        justify-content: space-between;
+        height: 38px;
+        line-height: 25px;
+        margin:8px 0;
+    }
+    &__container{
+        padding:8px;
+    }
+    &__submit{
+        border: 0;
+        padding: 8px;
+        background-color: $cardYellow;
+        border-radius: 4px 0 0 4px;
+        outline: none;
+        border: 0;
+        text-transform: uppercase;
+        transition: 0.2s;
+        &:enabled{
+            // cursor: pointer;
+        }
+        &:hover:enabled {
+            color: $white;
+            background-color: $purple;
+            transition: 0.2s;
+        }
+    }
+}
+
+.error__text{
+    color:$red;
+    margin:12px 0;
+    font-family: $headingFont;
+}
+
+.grecaptcha-badge{
+    // display:none;
 }
