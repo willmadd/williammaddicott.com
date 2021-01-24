@@ -6,8 +6,10 @@ section.home{
     flex-direction: column;
     width:100%;
     margin-top:43px;
+    position: relative;
     h1{
         font-size: 36px;
+        margin-top: -52px;
         @include breakpoint($mobMed){
             font-size: 48px;
         }
@@ -16,10 +18,55 @@ section.home{
         }
         @include breakpoint($tablet){
             font-size: 96px;
+            margin-top:0;
         }
         @include breakpoint($desktop){
             font-size: 122px;
         }
     }
     font-size: 144px;
+}
+
+.home{
+    &__arrow{
+        width:40px;
+        height:40px;
+        border-radius: 50%;
+        border: 1px solid $workGreyDark;
+        background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABoElEQVR4Xu2YTUoDQRCFX7xDvJcbQTC4dONG8BiCGzcuQwTBjffSO6gUdKAJE5Lu+mmofrPNVHW/r96bmc4Kk1+ryfWDAOiAyQkwApMbgA9BRoARmJwAIzC5AfgWYAQYgckJMAKTG4BvAUagIwJXAN5K3QOAz44eliXXAF5Lw3sAXy3NexzwDWBdFvkFcAfgvWVRw3tvAWwBXJSePwAuW/prAchaoyAcipe9hAAQy31U1EdAWBIvg7hpjWSPA0TwsQ1ExMF07V4AoyCYihcRGgDREMzFWwCIguAi3gqANwQ38ZYAvCC4ircGYA3BXbwHACsIIeK9AGghhIn3BNALIVS8N4BWCOHiIwCcC2GI+CgApyDI7/WRNvRwpf0Ubjl6L035rzSo9xF6vI4EcMwJNcRQ8ZERqEUuOSHU9vVmoh2wX1sg7A7ysxnx19ooAKL9GcBjgfAC4KnlgWJ170gAVhpUfQhAhS9BMR2QYIgqCXSACl+CYjogwRBVEugAFb4ExXRAgiGqJNABKnwJiumABENUSaADVPgSFNMBCYaokvAPGm9vQYkMCVYAAAAASUVORK5CYII=");
+        background-size: 35px;
+        background-position: center 4px;
+        background-color: $cardBlue;
+        position: absolute;
+        bottom: 30px;
+        box-shadow: 0px 0px 5px $workGreyMid;
+        background-repeat: no-repeat;
+        @include breakpoint($desktop){
+            display:none;
+        }
+        &:focus{
+            outline:none;
+        }
+    
+    }
+}
+
+.box {
+    align-self: flex-end;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    margin: 0 auto 0 auto;
+    transform-origin: bottom;
+    cursor: pointer;
+}
+.bounce-4 {
+    animation-name: bounce-4;
+    animation-timing-function: ease;
+}
+@keyframes bounce-4 {
+    0%   { transform: scale(1,1)    translateY(0); }
+    5%  { transform: scale(1.1,.9) translateY(0); }
+    10%  { transform: scale(.9,1.1) translateY(-10px); }
+    20%  { transform: scale(1,1)    translateY(0); }
+    100% { transform: scale(1,1)    translateY(0); }
 }

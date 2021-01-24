@@ -32,7 +32,6 @@ class ContactController extends Controller
 
         $message=[
             'name' =>$name,
-            // 'email' =>$email,
             'email'=>'willmaddicott@gmail.com',
             'message_content'=>$message
         ];
@@ -87,7 +86,7 @@ class ContactController extends Controller
     {
         try{
                 Mail::send('email-template', $data, function($message) {
-                    $message->to('willmaddicott@gmail.com', 'Williammaddicott.com')->subject
+                    $message->to('hello@williammaddicott.com', 'Williammaddicott.com')->subject
                         ('New Message from Website');
                     $message->from('noreply@williammaddicott.com','Website');
                 });

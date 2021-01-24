@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
-        content="William Maddicott is an experienced freelance web developer and Designer based in Meanwood, Leeds, UK.">
+        content="William Maddicott Web Design and Development. Freelancer based in Meanwood & Headingley, Leeds">
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
@@ -23,9 +23,21 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="William Maddicott | Web Design & Development">
+    <meta property="og:description"
+        content="William Maddicott Web Design and Development. Freelancer based in Meanwood & Headingley, Leeds">
+    <meta property="og:image" content="./images/headermeta.webp">
+    <meta property="og:url" content="https://www.williammaddicott.com">
+
+    <meta name="twitter:title" content="William Maddicott | Web Design & Development ">
+    <meta name="twitter:description"
+        content=" William Maddicott Web Design and Development. Freelancer based in Meanwood & Headingley, Leeds">
+    <meta name="twitter:image" content=" ./images/headermeta.webp">
+    <meta name="twitter:card" content="summary_large_image">
     <title>William Maddicott | Web Design & Development</title>
 
-    <!-- Fonts -->
     <script defer src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -34,50 +46,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
         integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
         crossorigin="anonymous"></script>
-    <script src="./js/script.js"></script>
+    <script src="./js/script.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Maven+Pro&display=swap"
         rel="stylesheet">
     <link href="./css/app.min.css" rel="stylesheet">
-    
+    <me <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1WZK7KTYNQ"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1WZK7KTYNQ"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
-    function gtag() {
-        dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', 'G-1WZK7KTYNQ');
-    </script>
+        gtag('config', 'G-1WZK7KTYNQ');
+        </script>
 </head>
 
 <body>
-    <!-- <nav class="nav">
-        <ul>
-            <li>
-                <a href="#home" class="active"><span class="nav__letter">W</span>M</a>
-            </li>
-            <li>
-                <a href="#about"><span class="nav__letter">A</span>bout</a>
-            </li>
-            <li>
-                <a href="#services"><span class="nav__letter">S</span>ervices I Offer</a>
-            </li>
-            <li>
-                <a href="#work"><span class="nav__letter">M</span>y Work</a>
-            </li>
-            <li>
-                <a href="#skills"><span class="nav__letter">T</span>ech</a>
-            </li>
-            <li>
-                <a href="#contact"><span class="nav__letter">C</span>ontact</a>
-            </li>
-        </ul>
-    </nav> -->
-
     <nav role="navigation">
         <h2 id="menu__title" class="menu__title"><span>WM</span></h2>
         <div id="menuToggle">
@@ -96,7 +83,7 @@
                     <a href="#services"><span class="nav__letter">S</span>ervices I Offer</a>
                 </li>
                 <li>
-                    <a href="#work"><span class="nav__letter">M</span>y Work</a>
+                    <a href="#work"><span class="nav__letter">F</span>eatured Work</a>
                 </li>
                 <li>
                     <a href="#skills"><span class="nav__letter">T</span>ech</a>
@@ -107,13 +94,13 @@
             </ul>
         </div>
     </nav>
-
-    <!-- // -->
     <main class="main">
         <section class="home" id="home">
-            <h1>william maddicott.</h1>
-            <h1>web design & development<span class="green">.</span><span class="red">.</span><span
+            <h1>william maddicott.<br/>web design & development<span class="green">.</span><span class="red">.</span><span
                     class="yellow">.</span></h1>
+                    <div class="stage">
+                        <button id="scroll__button" onclick=scrollButton() class="home__arrow box bounce-4"></button>
+                    </div>
         </section>
         <section class="about" id="about">
             <h2>About Me<span class="green">.</span><span class="red">.</span><span class="yellow">.</span></h2>
@@ -540,28 +527,32 @@
                 <div class="contact__text">
                     <p>Got a query or a project you want to discuss? Please send me a message and I'll get right back to
                         you!</p>
-                    <a href="https://www.linkedin.com/in/william-maddicott/" aria-label="link to linked in profile" target="blank">
+                    <a href="https://www.linkedin.com/in/william-maddicott/" aria-label="link to linked in profile"
+                        target="blank">
                         <img src="./images/linkedin.svg" width="48" height="48" alt="linked in logo" />
                     </a>
                     <div class="phone__section">
                         <p>Phone</p>
-                            <form id="phone__form" class="phone__form">
-                                <div id="phone__container" class="phone__container"><p>0784X XXXXXX</p></div>
-                                <button id="phone__submit" class="phone__submit" type="submit">Reveal</button>
-                            </form>
+                        <form id="phone__form" class="phone__form">
+                            <div id="phone__container" class="phone__container">
+                                <p>0784X XXXXXX</p>
+                            </div>
+                            <button id="phone__submit" class="phone__submit" type="submit">Reveal</button>
+                        </form>
                         <p class="subheading">Hidden by default to protect me from Spam</p>
                     </div>
                     <h4>Or Send me a message:</h4>
                 </div>
                 <form id="contact__form">
-                <input type="hidden" id="recaptcha__input" name="recaptcha__input" value="">
+                    <input type="hidden" id="recaptcha__input" name="recaptcha__input" value="">
                     <div class="wrapper">
                         <p id="form__error" class="warning contact__form__error">An error occured at our end and your
                             message could not be sent, Please try again!</p>
                         <fieldset class="formRow">
                             <div class="formRow--item">
                                 <label for="firstname" class="formRow--input-wrapper js-inputWrapper">
-                                    <input type="text" class="formRow--input js-input" name="name" id="name" placeholder="Name" minlength="2" required>
+                                    <input type="text" class="formRow--input js-input" name="name" id="name"
+                                        placeholder="Name" minlength="2" required>
                                 </label>
                             </div>
                         </fieldset>
@@ -570,7 +561,8 @@
                         <fieldset class="formRow">
                             <div class="formRow--item">
                                 <label for="email" class="formRow--input-wrapper js-inputWrapper">
-                                    <input type="text" class="formRow--input js-input" name="email" id="email" placeholder="Email">
+                                    <input type="text" class="formRow--input js-input" name="email" id="email"
+                                        placeholder="Email">
                                 </label>
                             </div>
                         </fieldset>
