@@ -7,7 +7,6 @@ $(document).ready(function () {
   $('.grecaptcha-badge').hide();
 
   $("#contact__form").on("submit", (event) => {
-    console.log("hello");
     event.preventDefault();
   });
   $("#contact__form").validate({
@@ -187,4 +186,19 @@ const checkRecaptcha = () => {
  
      }
    }
+}
+
+
+// $("#home__arrow").click(function() {
+//   console.log('click');
+//   $([document.documentElement, document.body]).animate({
+//       scrollTop: $("#services").offset().top
+//   }, 2000);
+// });
+
+const scrollButton = () => {
+    $([document.documentElement, document.body]).animate({
+      scrollTop: $("#about").offset().top - 56
+  }, 1000);
+  $('#scroll__button').hide();
 }
