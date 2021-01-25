@@ -47,7 +47,7 @@ section.home {
         left: 0;
         right: 0;
         text-align: center;
-        @include breakpoint($desktop) {
+        @include breakpoint($tablet) {
             display: none;
         }
         &:focus {

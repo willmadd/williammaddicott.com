@@ -28,13 +28,13 @@
     <meta property="og:title" content="William Maddicott | Web Design & Development">
     <meta property="og:description"
         content="William Maddicott Web Design and Development. Freelancer based in Meanwood & Headingley, Leeds">
-    <meta property="og:image" content="./images/headermeta.webp">
+    <meta property="og:image" content="./images/headermeta.jpg">
     <meta property="og:url" content="https://www.williammaddicott.com">
 
     <meta name="twitter:title" content="William Maddicott | Web Design & Development ">
     <meta name="twitter:description"
         content=" William Maddicott Web Design and Development. Freelancer based in Meanwood & Headingley, Leeds">
-    <meta name="twitter:image" content=" ./images/headermeta.webp">
+    <meta name="twitter:image" content=" ./images/headermeta.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <title>William Maddicott | Web Design & Development</title>
 
@@ -46,11 +46,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
         integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
         crossorigin="anonymous"></script>
-    <script src="./js/script.min.js"></script>
+    <script src="./js/script.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Maven+Pro&display=swap"
         rel="stylesheet">
     <link href="./css/app.min.css" rel="stylesheet">
-    <me <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-1WZK7KTYNQ"></script>
         <script>
         window.dataLayer = window.dataLayer || [];
@@ -77,7 +77,7 @@
                     <a href="#home" class="active"><span class="nav__letter">W</span>M</a>
                 </li>
                 <li>
-                    <a href="#about"><span class="nav__letter">A</span>bout</a>
+                    <a href="#about"><span class="nav__letter">A</span>bout Me</a>
                 </li>
                 <li>
                     <a href="#services"><span class="nav__letter">S</span>ervices I Offer</a>
@@ -143,26 +143,11 @@
                         <p class="discuss">Get in touch now to discuss your requirements</p>
                     </div>
                 </div>
-                <!-- <div></div>
-                <div>
-                    <p>I've worked with <span class="green">Brands</span>, <span class="green">agencies</span> and small
-                        businesses across the world<span class="yellow">.</span></p>
-                </div>
-                <div></div>
-                <div>
-                    <p>I specialise in Small Business websites, Ecommerce, Web Apps & Portfolio sites. (pending approval from the cat)<span
-                            class="yellow">.</span></p>
-                </div>
-                <div></div>
-                <div>
-                    <img src="/images/william.png" />
-                </div> -->
             </div>
         </section>
         <section id="services" class="about" data-scrollclass="services__lead" data-scrollcolor="">
-            <h2>Services I offer<span class="green">.</span><span class="red">.</span><span class="yellow">.</span></h2>
+            <h2>Services I Offer<span class="green">.</span><span class="red">.</span><span class="yellow">.</span></h2>
             <div class="services__wrapper">
-
                 <div id="website__development" class="services__card">
                     <div class="services__title services__dev">
                         <h3>Development</h3>
@@ -539,9 +524,9 @@
                             </div>
                             <button id="phone__submit" class="phone__submit" type="submit">Reveal</button>
                         </form>
-                        <p class="subheading">Hidden by default to protect me from Spam</p>
+                        <p class="subheading">Hidden by default to protect me from spam</p>
                     </div>
-                    <h4>Or Send me a message:</h4>
+                    <h3>Or Send me a message:</h3>
                 </div>
                 <form id="contact__form">
                     <input type="hidden" id="recaptcha__input" name="recaptcha__input" value="">

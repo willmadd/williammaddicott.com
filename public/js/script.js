@@ -104,7 +104,9 @@ $(document).ready(function () {
     });
 
   $(document).ready(function () {
+
     $(document).on("scroll", onScroll);
+
     $('a[href^="#"]').on("click", function (e) {
       e.preventDefault();
       $(document).off("scroll");
@@ -120,12 +122,12 @@ $(document).ready(function () {
         .stop()
         .animate(
           {
-            scrollTop: $target.offset().top + 2,
+            scrollTop: $target.offset().top - 43,
           },
           500,
           "swing",
           function () {
-            window.location.hash = target;
+            // window.location.hash = target;
             $(document).on("scroll", onScroll);
           }
         );
