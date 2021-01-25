@@ -28,13 +28,13 @@
     <meta property="og:title" content="William Maddicott | Web Design & Development">
     <meta property="og:description"
         content="William Maddicott Web Design and Development. Freelancer based in Meanwood & Headingley, Leeds">
-    <meta property="og:image" content="./images/headermeta.jpg">
+    <meta property="og:image" content="https://www.williammaddicott.com/images/headermeta.jpg">
     <meta property="og:url" content="https://www.williammaddicott.com">
 
     <meta name="twitter:title" content="William Maddicott | Web Design & Development ">
     <meta name="twitter:description"
         content=" William Maddicott Web Design and Development. Freelancer based in Meanwood & Headingley, Leeds">
-    <meta name="twitter:image" content=" ./images/headermeta.jpg">
+    <meta name="twitter:image" content=" https://www.williammaddicott.com/images/headermeta.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <title>William Maddicott | Web Design & Development</title>
 
@@ -107,7 +107,7 @@
             <div class="about__content">
                 <div class="col">
                     <div>
-                        <p>Hello, I'm <span class="green">William</span>. An experienced Web Developer based in <span
+                        <p>Hello, I'm <span class="green">William</span>. An experienced Web Developer & Designer based in <span
                                 class="green">Meanwood</span>, Leeds<span class="yellow">.</span></p>
                     </div>
                     <img loading="lazy"
@@ -140,7 +140,7 @@
                         loading="lazy" src="/images/applex4.webp" alt="apple laptop" />
 
                     <div>
-                        <p class="discuss">Get in touch now to discuss your requirements</p>
+                        <p class="discuss">I'm always happy to take on new work, it doesn't matte how big or small your project it, I'd be happy to help!</p>
                     </div>
                 </div>
             </div>
@@ -182,7 +182,7 @@
                     </div>
                     <div class="website__container">
                         <img src="/images/seo.png" alt="screenshot showing google analytics dashboard" />
-                        <p>Let us help your website reach it's google potential<br /><br />We can audit your site for on
+                        <p>Let me help your website reach it's google potential<br /><br />We can audit your site for on
                             and
                             off page seo factors and put together a plan to increase
                             traction by the big search engines.</p>
@@ -452,6 +452,8 @@
         </section>
         <section id="skills" class="skills" data-scrollclass="skills__lead">
             <h2>Tech I work with<span class="green">.</span><span class="red">.</span><span class="yellow">.</span></h2>
+            <p>I work with all frontend web technologies, along with PHP (with Laravel) and Node on the backend. Specialise in Wordpress and React headless apps!</p>
+            <p>My prefered technologies are:</p>
             <div class="skills__wrapper">
 
                 <div id="html" class="skills__card">

@@ -1,5 +1,9 @@
 .skills{
     margin-top:88px;
+    & > p{
+        margin: 12px 24px;
+        text-align: center;
+    }
     &__wrapper{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -16,6 +20,7 @@
         @include breakpoint($desktop){
             grid-template-columns: repeat(6, 1fr);
         }
+
         p{
             margin-top: 12px;
             text-align: center;
