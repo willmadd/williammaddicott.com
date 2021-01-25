@@ -191,13 +191,6 @@ const checkRecaptcha = () => {
 }
 
 
-// $("#home__arrow").click(function() {
-//   console.log('click');
-//   $([document.documentElement, document.body]).animate({
-//       scrollTop: $("#services").offset().top
-//   }, 2000);
-// });
-
 const scrollButton = () => {
     $([document.documentElement, document.body]).animate({
       scrollTop: $("#about").offset().top - 56

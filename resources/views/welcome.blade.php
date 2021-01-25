@@ -39,7 +39,6 @@
     <title>William Maddicott | Web Design & Development</title>
 
     <script defer src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
@@ -68,7 +67,9 @@
     <nav role="navigation">
         <h2 id="menu__title" class="menu__title"><span>WM</span></h2>
         <div id="menuToggle">
-            <input type="checkbox" />
+            <label for="menuchk">
+                </label>
+            <input type="checkbox" name="nemuchk"/>
             <span class="burger__span"></span>
             <span class="burger__span"></span>
             <span class="burger__span"></span>
@@ -99,7 +100,7 @@
             <h1>william maddicott.<br/>web design & development<span class="green">.</span><span class="red">.</span><span
                     class="yellow">.</span></h1>
                     <div class="stage">
-                        <button id="scroll__button" onclick=scrollButton() class="home__arrow box bounce-4"></button>
+                        <button id="scroll__button" onclick=scrollButton() class="home__arrow box bounce-4" aria-label="scroll down button"></button>
                     </div>
         </section>
         <section class="about" id="about">
@@ -140,7 +141,7 @@
                         loading="lazy" src="/images/applex4.webp" alt="apple laptop" />
 
                     <div>
-                        <p class="discuss">I'm always happy to take on new work, it doesn't matte how big or small your project it, I'd be happy to help!</p>
+                        <p class="discuss">I'm always happy to take on new work, it doesn't matter how big or small your project it, I'd be happy to help!</p>
                     </div>
                 </div>
             </div>
@@ -156,7 +157,7 @@
                         <img src="/images/developmentx4.webp"
                             srcset=" ./images/developmentx4.webp 1000w, ./images/developmentx3.webp 750w, ./images/developmentx2.webp 500w, ./images/developmentx1.webp 250w"
                             loading="lazy" height="1000" weight="1000" alt="computer with code on the screen" />
-                        <p>Using the latest web technologies I create fully responsive, mobile first pixel perfect
+                        <p>Using the latest web technologies I create fully responsive, mobile first,  pixel perfect
                             websites.
                             <br /><br />I will create you a brand new website, or also take on maintenance of your
                             existing
@@ -184,7 +185,7 @@
                         <img src="/images/seo.png" alt="screenshot showing google analytics dashboard" />
                         <p>Let me help your website reach it's google potential<br /><br />We can audit your site for on
                             and
-                            off page seo factors and put together a plan to increase
+                            off page SEO factors and put together a plan to increase
                             traction by the big search engines.</p>
                     </div>
                 </div>
@@ -193,7 +194,7 @@
                         <h3>Hosting</h3>
                     </div>
                     <div class="website__container">
-                        <img src="/images/hosting.jpg" alt="vector of cloud hosting in cloud" />
+                        <img src="/images/hosting.webp" alt="vector of cloud hosting in cloud" />
                         <p>Don't know how to host your website?<br /><br />We can can provide secure hosting and a
                             domain
                             name to your small business website, </p>
@@ -256,7 +257,7 @@
                             </div>
                         </div>
                         <div class="work__mobile">
-                            <img src="./images/regismob.png" loading="lazy" width="99" height="200"
+                            <img src="./images/regismob.webp" loading="lazy" width="99" height="200"
                                 alt="regis website mobile screen shot" />
                         </div>
                     </div>
@@ -264,7 +265,7 @@
                         <div class="work__card__logo">
                             <img src="./images/regis-logo.svg" height="36" width="116" alt="Regis website" />
                         </div>
-                        <p>I undertook general maintenance of Regis Salons’ Wordpress and Magento sites, including
+                        <p>I've undertaken general maintenance of Regis Salons’ Wordpress and Magento sites, including
                             creating new custom pages and templates using Advanced Custom Forms. On the Magento side of
                             things I undertook the development work for the Product Display Page among other retainer
                             work. </p>
@@ -281,7 +282,7 @@
                             </div>
                         </div>
                         <div class="work__mobile">
-                            <img src="./images/gshockmob.png" loading="lazy" width="99" height="200"
+                            <img src="./images/gshockmob.webp" loading="lazy" width="99" height="200"
                                 alt="g shock website mobile" aria-label="g shock website mobile" />
                         </div>
                     </div>
@@ -298,7 +299,7 @@
 
                 <div class="work__card" id="sc">
                     <div class="work__card__link"><a rel="nofollow" href="https://www.specialisedcovers.com/">
-                            <img src="./images/scsite.jpg" width="720" height="360" loading="lazy"
+                            <img src="./images/scsite.webp" width="720" height="360" loading="lazy"
                                 alt="specialised covers website" aria-label="specialised covers website" /></a>
                         <div class="work__badges">
                             <div class="work__badge magento">
@@ -309,7 +310,7 @@
                             </div>
                         </div>
                         <div class="work__mobile">
-                            <img src="./images/scmob.png" loading="lazy" width="99" height="200"
+                            <img src="./images/scmob.webp" loading="lazy" width="99" height="200"
                                 alt="specialised covers mobile website"
                                 aria-label="specialised covers mobile website" />
                         </div>
@@ -319,9 +320,7 @@
                             <img src="./images/sc.svg" alt="specialsied covers logo" height="44" width="161"
                                 loading="lazy" area-label="specialsied covers logo" />
                         </div>
-                        <p>G Shock Product Page improvements, including frontend and backend work for 'Out of Stock'
-                            notifications and 'coming soon' buttons. Along with checkout redesign carried out for the
-                            Magento 2 G-Shock Checkout</p>
+                        <p>I've developed a custom Magento JS 'cover customiser', located on the product page, it allows customers to ceate and purchase a custom car cover</p>
                     </div>
                 </div>
 
@@ -338,7 +337,7 @@
                             </div>
                         </div>
                         <div class="work__mobile">
-                            <img src="./images/mahamob.png" loading="lazy" width="99" height="200"
+                            <img src="./images/mahamob.webp" loading="lazy" width="99" height="200"
                                 alt="maharishi mobile website" aria-label="maharishi mobile website" />
                         </div>
                     </div>
@@ -347,15 +346,13 @@
                             <img class="maha__logo" src="./images/maha.webp" height="36" width="363" loading="lazy"
                                 alt="mahaishi logo" aria-label="maharishi logo" />
                         </div>
-                        <p>G Shock Product Page improvements, including frontend and backend work for 'Out of Stock'
-                            notifications and 'coming soon' buttons. Along with checkout redesign carried out for the
-                            Magento 2 G-Shock Checkout</p>
+                        <p>Regular style and functionality updates to a Shopify headless React store. Utalising React, Redux, Redux Saga, Kirby and more.</p>
                     </div>
                 </div>
 
                 <div class="work__card" id="viewgpx">
                     <div class="work__card__link"><a rel="nofollow" href="https://www.viewgpx.com/">
-                            <img src="./images/gpxsite.jpg" alt="view gpx site" /></a>
+                            <img src="./images/gpxsite.webp" alt="view gpx site" /></a>
                         <div class="work__badges">
                             <div class="work__badge react">
                                 <p>React</p>
@@ -368,7 +365,7 @@
                             </div>
                         </div>
                         <div class="work__mobile">
-                            <img src="./images/gpxmob.png" width="99" height="200" alt="viewgpx mobile site" />
+                            <img src="./images/gpxmob.webp" width="99" height="200" alt="viewgpx mobile site" />
                         </div>
                     </div>
                     <div class="work__card__content">
@@ -528,7 +525,7 @@
                         </form>
                         <p class="subheading">Hidden by default to protect me from spam</p>
                     </div>
-                    <h3>Or Send me a message:</h3>
+                    <h3>Or send me a message:</h3>
                 </div>
                 <form id="contact__form">
                     <input type="hidden" id="recaptcha__input" name="recaptcha__input" value="">
