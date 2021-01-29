@@ -67,9 +67,9 @@
     <nav role="navigation">
         <h2 id="menu__title" class="menu__title"><span>WM</span></h2>
         <div id="menuToggle">
-            <label for="menuchk">
+            <label class="menu__label" for="menuchk">CHK
                 </label>
-            <input type="checkbox" name="menuchk"/>
+                <input type="checkbox" name="menuchk" id="menuchk"/>
             <span class="burger__span"></span>
             <span class="burger__span"></span>
             <span class="burger__span"></span>
