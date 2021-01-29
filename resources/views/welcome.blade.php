@@ -69,7 +69,7 @@
         <div id="menuToggle">
             <label for="menuchk">
                 </label>
-            <input type="checkbox" name="nemuchk"/>
+            <input type="checkbox" name="menuchk"/>
             <span class="burger__span"></span>
             <span class="burger__span"></span>
             <span class="burger__span"></span>
